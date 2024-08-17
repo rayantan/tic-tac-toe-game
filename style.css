@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(game1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+  font-family: monospace;
+  font-size: 3em;
+  animation: color-change 1s infinite;
+}
+@keyframes color-change {
+    0% { color: rgb(245, 103, 103); }
+    25% { color: rgb(245, 243, 103); }
+    50% { color: rgb(116, 236, 116); }
+    75% { color: rgb(103, 236, 245); }
+    100% { color: rgb(107, 107, 223); }
+  }
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: 6px solid yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #0ddac9;
+}
+
+.x::after {
+    content: 'X';
+    color: #d76315;
+}
+
+.o::after {
+    content: 'O';
+    color:#3fde14;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
